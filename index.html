@@ -1,0 +1,48 @@
+<!doctype html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hola!</title>
+<!--Grupo CSS-->
+<link rel="stylesheet" href="css/app4temas.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+
+<!--Grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="phonegap.js"></script><!--Necesario-->
+
+</head>
+<body>
+ <div data-role="page" id="Principal" data-theme="a"><!--DivPrincipal-->
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+    <h1>Hola!</h1>
+   </div>
+ 
+ <div data-role="main" class="ui-content" data-theme="a"><!--Main Div-->
+ <p>Introduce tu nombre</p>
+   <input id="demo" type="text">
+   <button type="button" onClick="Guardar()">Enviar</button>
+   <script>
+   function Guardar()
+   {
+    var x=document.getElementById("demo").value
+		if (x!= "" || isNaN(x))
+	{
+			alert("Hola "+x);   
+   }
+   else{
+	   alert("Introduzca su nombre");
+   }
+   }
+   </script>
+ </div><!--Main Div-->
+ 
+ <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+   <h4>Rogelio Yair Rodriguez Serrano</h4>
+   <img src="res/android/mdpi.png" width="56" height="56">
+ </div>
+ </div><!--page-->
+</body>
+</html>
